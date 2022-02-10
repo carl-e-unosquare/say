@@ -15,3 +15,14 @@ func TestHello(t *testing.T) {
 		t.Fail()
 	}
 }
+
+func TestBye(t *testing.T) {
+	n := "Bob"
+	expected := "Good bye Bob."
+	actual := say.Bye(n)
+
+	if expected != actual {
+		t.Logf("Hello: expected [%s] got [%s]", expected, actual)
+		t.Fail()
+	}
+}
